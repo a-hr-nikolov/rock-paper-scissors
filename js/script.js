@@ -1,7 +1,3 @@
-// function getComputerChoice() {
-//   return Math.floor(Math.random() * 3) + 1;
-// }
-
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3) + 1;
   switch (randomNumber) {
@@ -13,14 +9,25 @@ function getComputerChoice() {
       return 'scissors';
   }
 }
-console.log(
-  '🚀 ~ file: script.js:6 ~ getComputerChoice ~ getComputerChoice():',
-  getComputerChoice()
-);
 
-// function roundRockPaperScissors(playerSelection, computerSelection) {
-//   let computerChoice = "";
-//   switch (computerSelection) {
-//     case 1:
-//   }
-// }
+function playRockPaperScissors(
+  playerSelection,
+  computerSelection = getComputerChoice()
+) {
+  let playerChoice = playerSelection.toLowerCase();
+  if (playerChoice === computerSelection) return "It's a DRAW!";
+  switch (playerChoice) {
+    case 'rock':
+      if (computerSelection === 'paper') return 'You lose! Paper beats Rock!';
+      if (computerSelection === 'scissors')
+        return 'You win! Rock beats Scissors!';
+    case 'paper':
+      if (computerSelection === 'rock') return 'You win! Paper beats Rock!';
+      if (computerSelection === 'scissors')
+        return 'You lose! Scissors beats Paper!';
+    case 'scissors':
+      if (computerSelection === 'rock') return 'You lose! Rock beats Scissors!';
+      if (computerSelection === 'paper')
+        return 'You win! Scissors beats Paper!';
+  }
+}
