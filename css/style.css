@@ -1,0 +1,63 @@
+body {
+  background: darkslategray;
+  color: white;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+#result {
+  text-align: center;
+  vertical-align: middle;
+  padding: 1rem;
+  margin: 5rem;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+#score {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.blocks {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', fantasy;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  color: pink;
+}
+
+button {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 2px;
+  height: 5rem;
+  width: 5rem;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+button > * {
+  pointer-events: none;
+}

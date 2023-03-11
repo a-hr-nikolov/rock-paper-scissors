@@ -4,24 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/script.js" defer></script>
-    <title>Document</title>
+    <title>Rock-Paper-Scissors</title>
   </head>
   <body>
-    <div id="container">
-      <button class="choice" value="rock">Rock</button>
-      <button class="choice" value="paper">Paper</button>
-      <button class="choice" value="scissors">Scissors</button>
-    </div>
+    <h1>Rock Paper Scissors</h1>
+    <h2>against the machine!</h2>
+    <p>Can you win a best-of-five battle?</p>
     <div id="result">Results appear here.</div>
     <div id="score">
       <div class="blocks" id="#player-block">
-        <span>Player Score: </span><span id="player-score">0</span>
+        <span><i class="fa-solid fa-user"></i> </span
+        ><span id="player-score">0</span>
       </div>
       <div class="blocks" id="#computer-block">
-        <span>Computer Score: </span><span id="computer-score">0</span>
+        <span><i class="fa-solid fa-desktop"></i> </span
+        ><span id="computer-score">0</span>
       </div>
     </div>
-    <div id="final-result"></div>
+    <div id="container">
+      <button class="choice" value="rock">
+        <i class="fa-solid fa-hand-back-fist"></i>
+      </button>
+      <button class="choice" value="paper">
+        <i class="fa-solid fa-hand"></i>
+      </button>
+      <button class="choice" value="scissors">
+        <i class="fa-solid fa-hand-scissors"></i>
+      </button>
+    </div>
   </body>
 </html>
