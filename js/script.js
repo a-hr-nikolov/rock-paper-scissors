@@ -39,6 +39,7 @@ function playRockPaperScissors(event) {
     }
   document.querySelector('#result').textContent = result;
   keepScore(result);
+  endGame();
 }
 
 function keepScore(result) {
@@ -53,6 +54,23 @@ function keepScore(result) {
   if (result.includes('lose')) {
     computerScore++;
     document.querySelector('#computer-score').innerText = `${computerScore}`;
+  }
+}
+
+function endGame() {
+  if (document.querySelector('#player-score').innerText == 5) {
+    document.querySelector('#final-result').innerText =
+      'The PC is no match for your wit!';
+    buttonsRPS.forEach(button =>
+      button.removeEventListener('click', playRockPaperScissors)
+    );
+  }
+  if (document.querySelector('#computer-score').innerText == 5) {
+    document.querySelector('#final-result').innerText =
+      'You bring shame to the human race!';
+    buttonsRPS.forEach(button =>
+      button.removeEventListener('click', playRockPaperScissors)
+    );
   }
 }
 
