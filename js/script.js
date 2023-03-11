@@ -16,7 +16,6 @@ function playRockPaperScissors(event) {
   let result;
   if (playerChoice === computerChoice) {
     result = "It's a DRAW!";
-    return (document.querySelector('#result').textContent = result);
   } else
     switch (playerChoice) {
       case 'rock':
@@ -38,10 +37,24 @@ function playRockPaperScissors(event) {
       default:
         result = 'Not a valid choice, you lose!';
     }
-  return (document.querySelector('#result').textContent = result);
+  document.querySelector('#result').textContent = result;
+  keepScore(result);
 }
 
-function keepScore() {}
+function keepScore(result) {
+  let playerScore = Number(document.querySelector('#player-score').innerText);
+  let computerScore = Number(
+    document.querySelector('#computer-score').innerText
+  );
+  if (result.includes('win')) {
+    playerScore++;
+    document.querySelector('#player-score').innerText = `${playerScore}`;
+  }
+  if (result.includes('lose')) {
+    computerScore++;
+    document.querySelector('#computer-score').innerText = `${computerScore}`;
+  }
+}
 
 const buttonsRPS = document.querySelectorAll('.choice');
 buttonsRPS.forEach(button =>
