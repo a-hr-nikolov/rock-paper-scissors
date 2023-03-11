@@ -16,48 +16,37 @@ function playRockPaperScissors(event) {
   let result;
   if (playerChoice === computerChoice) {
     result = "It's a DRAW!";
-    return (resultDiv.textContent = result);
-  }
-  switch (playerChoice) {
-    case 'rock':
-      if (computerChoice === 'paper') result = 'You lose! Paper beats Rock!';
-      if (computerChoice === 'scissors')
-        result = 'You win! Rock beats Scissors!';
-      break;
-    case 'paper':
-      if (computerChoice === 'rock') result = 'You win! Paper beats Rock!';
-      if (computerChoice === 'scissors')
-        result = 'You lose! Scissors beats Paper!';
-      break;
-    case 'scissors':
-      if (computerChoice === 'rock') result = 'You lose! Rock beats Scissors!';
-      if (computerChoice === 'paper') result = 'You win! Scissors beats Paper!';
-      break;
-    default:
-      result = 'Not a valid choice, you lose!';
-  }
-  return (resultDiv.textContent = result);
+    return (document.querySelector('#result').textContent = result);
+  } else
+    switch (playerChoice) {
+      case 'rock':
+        if (computerChoice === 'paper') result = 'You lose! Paper beats Rock!';
+        if (computerChoice === 'scissors')
+          result = 'You win! Rock beats Scissors!';
+        break;
+      case 'paper':
+        if (computerChoice === 'rock') result = 'You win! Paper beats Rock!';
+        if (computerChoice === 'scissors')
+          result = 'You lose! Scissors beats Paper!';
+        break;
+      case 'scissors':
+        if (computerChoice === 'rock')
+          result = 'You lose! Rock beats Scissors!';
+        if (computerChoice === 'paper')
+          result = 'You win! Scissors beats Paper!';
+        break;
+      default:
+        result = 'Not a valid choice, you lose!';
+    }
+  return (document.querySelector('#result').textContent = result);
 }
 
-const rockButton = document.createElement('button');
-const paperButton = document.createElement('button');
-const scissorsButton = document.createElement('button');
-const container = document.querySelector('#container');
-const resultDiv = document.createElement('div');
+function keepScore() {}
 
-rockButton.textContent = 'Rock';
-paperButton.textContent = 'Paper';
-scissorsButton.textContent = 'Scissors';
-resultDiv.textContent = 'Results appear hear.';
-
-container.appendChild(rockButton);
-container.appendChild(paperButton);
-container.appendChild(scissorsButton);
-container.appendChild(resultDiv);
-
-rockButton.addEventListener('click', playRockPaperScissors);
-paperButton.addEventListener('click', playRockPaperScissors);
-scissorsButton.addEventListener('click', playRockPaperScissors);
+const buttonsRPS = document.querySelectorAll('.choice');
+buttonsRPS.forEach(button =>
+  button.addEventListener('click', playRockPaperScissors)
+);
 
 // function playRPSBestOfFive() {
 //   let winnerTrack = 0;
