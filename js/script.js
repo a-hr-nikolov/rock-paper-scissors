@@ -12,29 +12,37 @@ function getComputerChoice() {
 
 function playRockPaperScissors(event) {
   let computerChoice = getComputerChoice();
-  let playerChoice = playerSelection.toLowerCase();
-  if (playerChoice === computerChoice) return "It's a DRAW!";
+  let playerChoice = event.target.innerText.toLowerCase();
+  let result;
+  if (playerChoice === computerChoice) {
+    result = "It's a DRAW!";
+    return console.log(result);
+  }
   switch (playerChoice) {
     case 'rock':
-      if (computerChoice === 'paper') return 'You lose! Paper beats Rock!';
-      if (computerChoice === 'scissors') return 'You win! Rock beats Scissors!';
-    case 'paper':
-      if (computerChoice === 'rock') return 'You win! Paper beats Rock!';
+      if (computerChoice === 'paper') result = 'You lose! Paper beats Rock!';
       if (computerChoice === 'scissors')
-        return 'You lose! Scissors beats Paper!';
+        result = 'You win! Rock beats Scissors!';
+      break;
+    case 'paper':
+      if (computerChoice === 'rock') result = 'You win! Paper beats Rock!';
+      if (computerChoice === 'scissors')
+        result = 'You lose! Scissors beats Paper!';
+      break;
     case 'scissors':
-      if (computerChoice === 'rock') return 'You lose! Rock beats Scissors!';
-      if (computerChoice === 'paper') return 'You win! Scissors beats Paper!';
+      if (computerChoice === 'rock') result = 'You lose! Rock beats Scissors!';
+      if (computerChoice === 'paper') result = 'You win! Scissors beats Paper!';
+      break;
     default:
-      return 'Not a valid choice, you lose!';
+      result = 'Not a valid choice, you lose!';
   }
+  return console.log(result);
 }
 
 const rockButton = document.createElement('button');
 const paperButton = document.createElement('button');
 const scissorsButton = document.createElement('button');
 const container = document.querySelector('#container');
-console.log('🚀 ~ file: script.js:37 ~ container:', container);
 
 rockButton.textContent = 'Rock';
 paperButton.textContent = 'Paper';
@@ -43,6 +51,10 @@ scissorsButton.textContent = 'Scissors';
 container.appendChild(rockButton);
 container.appendChild(paperButton);
 container.appendChild(scissorsButton);
+
+rockButton.addEventListener('click', playRockPaperScissors);
+paperButton.addEventListener('click', playRockPaperScissors);
+scissorsButton.addEventListener('click', playRockPaperScissors);
 
 // function playRPSBestOfFive() {
 //   let winnerTrack = 0;
