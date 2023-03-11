@@ -16,7 +16,7 @@ function playRockPaperScissors(event) {
   let result;
   if (playerChoice === computerChoice) {
     result = "It's a DRAW!";
-    return console.log(result);
+    return (resultDiv.textContent = result);
   }
   switch (playerChoice) {
     case 'rock':
@@ -36,21 +36,24 @@ function playRockPaperScissors(event) {
     default:
       result = 'Not a valid choice, you lose!';
   }
-  return console.log(result);
+  return (resultDiv.textContent = result);
 }
 
 const rockButton = document.createElement('button');
 const paperButton = document.createElement('button');
 const scissorsButton = document.createElement('button');
 const container = document.querySelector('#container');
+const resultDiv = document.createElement('div');
 
 rockButton.textContent = 'Rock';
 paperButton.textContent = 'Paper';
 scissorsButton.textContent = 'Scissors';
+resultDiv.textContent = 'Results appear hear.';
 
 container.appendChild(rockButton);
 container.appendChild(paperButton);
 container.appendChild(scissorsButton);
+container.appendChild(resultDiv);
 
 rockButton.addEventListener('click', playRockPaperScissors);
 paperButton.addEventListener('click', playRockPaperScissors);
