@@ -68,21 +68,33 @@ function endGame() {
   if (document.querySelector('#player-score').innerText == 5) {
     document.querySelector('#result').innerText =
       'THE GAME IS YOURS! No computer can match your wit!';
-    buttonsRPS.forEach(button => (button.style.display = 'none'));
+    choiceButtonsRPS.forEach(button => button.classList.toggle('off'));
+    reloadGameButton.classList.toggle('off');
   }
   if (document.querySelector('#computer-score').innerText == 5) {
     document.querySelector('#result').innerText =
-      'YOU LOST... PATHETIC! You bring shame to the human race!';
-    buttonsRPS.forEach(button => (button.style.display = 'none'));
+      'YOU LOST... You bring shame to the human race!';
+    choiceButtonsRPS.forEach(button => button.classList.toggle('off'));
+    reloadGameButton.classList.toggle('off');
   }
 }
 
-const buttonsRPS = document.querySelectorAll('.choice');
-buttonsRPS.forEach(button =>
+function reloadGame() {
+  choiceButtonsRPS.forEach(button => button.classList.toggle('off'));
+  reloadGameButton.classList.toggle('off');
+  document.querySelector('#result').innerText = 'So you dare try again? Brave!';
+  document.querySelector('#player-score').innerText = '0';
+  document.querySelector('#computer-score').innerText = '0';
+}
+
+const gameContainer = document.querySelector('.game');
+const choiceButtonsRPS = document.querySelectorAll('.choice');
+const startGameButton = document.querySelector('.start-game');
+const reloadGameButton = document.querySelector('.reload');
+
+choiceButtonsRPS.forEach(button =>
   button.addEventListener('click', playRockPaperScissors)
 );
 
-const startGameButton = document.querySelector('.start-game');
 startGameButton.addEventListener('click', startGame);
-
-const gameContainer = document.querySelector('.game');
+reloadGameButton.addEventListener('click', reloadGame);
