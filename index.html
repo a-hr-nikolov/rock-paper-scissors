@@ -21,28 +21,31 @@
   <body>
     <h1>Rock Paper Scissors</h1>
     <h2>against the machine!</h2>
-    <p>Can you win a best-of-five battle?</p>
-    <div id="result">Results appear here.</div>
-    <div id="score">
-      <div class="blocks" id="#player-block">
-        <span><i class="fa-solid fa-user"></i> </span
-        ><span id="player-score">0</span>
+    <p>Can you win a first-to-five battle?</p>
+    <button class="start-game">START GAME</button>
+    <div class="game off">
+      <div id="result">Results appear here.</div>
+      <div id="score">
+        <div class="blocks" id="#player-block">
+          <span><i class="fa-solid fa-user"></i> </span
+          ><span id="player-score">0</span>
+        </div>
+        <div class="blocks" id="#computer-block">
+          <span><i class="fa-solid fa-desktop"></i> </span
+          ><span id="computer-score">0</span>
+        </div>
       </div>
-      <div class="blocks" id="#computer-block">
-        <span><i class="fa-solid fa-desktop"></i> </span
-        ><span id="computer-score">0</span>
+      <div id="container">
+        <button class="choice" value="rock">
+          <i class="fa-solid fa-hand-back-fist"></i>
+        </button>
+        <button class="choice" value="paper">
+          <i class="fa-solid fa-hand"></i>
+        </button>
+        <button class="choice" value="scissors">
+          <i class="fa-solid fa-hand-scissors"></i>
+        </button>
       </div>
-    </div>
-    <div id="container">
-      <button class="choice" value="rock">
-        <i class="fa-solid fa-hand-back-fist"></i>
-      </button>
-      <button class="choice" value="paper">
-        <i class="fa-solid fa-hand"></i>
-      </button>
-      <button class="choice" value="scissors">
-        <i class="fa-solid fa-hand-scissors"></i>
-      </button>
     </div>
   </body>
 </html>

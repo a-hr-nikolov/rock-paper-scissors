@@ -2,12 +2,17 @@ body {
   background: darkslategray;
   color: white;
   display: flex;
-  height: 100vh;
+  height: 100svh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
 }
+
+.game {
+  text-align: center;
+}
+
 #result {
   text-align: center;
   vertical-align: middle;
@@ -21,6 +26,7 @@ body {
   display: flex;
   gap: 3rem;
   margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .blocks {
@@ -37,7 +43,7 @@ h2 {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 h2 {
@@ -46,18 +52,41 @@ h2 {
 }
 
 button {
-  background: transparent;
+  background: white;
   border: 2px solid white;
   border-radius: 5px;
   padding: 3px;
   margin: 2px;
   height: 5rem;
   width: 5rem;
-  color: white;
+  color: darkslategray;
   font-size: 3rem;
   text-align: center;
+  box-shadow: 0 6px pink;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(6px);
 }
 
 button > * {
   pointer-events: none;
+}
+
+.off {
+  display: none;
+}
+
+.start-game {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  width: auto;
+  height: auto;
+  padding: 0 0.5rem;
+  margin-top: 1rem;
 }

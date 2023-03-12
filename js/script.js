@@ -1,3 +1,8 @@
+function startGame(event) {
+  event.target.classList.toggle('off');
+  gameContainer.classList.toggle('off');
+}
+
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3) + 1;
   switch (randomNumber) {
@@ -76,3 +81,8 @@ const buttonsRPS = document.querySelectorAll('.choice');
 buttonsRPS.forEach(button =>
   button.addEventListener('click', playRockPaperScissors)
 );
+
+const startGameButton = document.querySelector('.start-game');
+startGameButton.addEventListener('click', startGame);
+
+const gameContainer = document.querySelector('.game');
