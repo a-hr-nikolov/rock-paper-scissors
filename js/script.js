@@ -33,16 +33,14 @@ function playRockPaperScissors(event) {
         if (computerChoice === 'rock')
           result = 'You win the round! Paper beats Rock!';
         if (computerChoice === 'scissors')
-          result = 'You lose! Scissors beats Paper!';
+          result = 'You lose! Scissors beat Paper!';
         break;
       case 'scissors':
         if (computerChoice === 'rock')
           result = 'You lose! Rock beats Scissors!';
         if (computerChoice === 'paper')
-          result = 'You win! Scissors beats Paper!';
+          result = 'You win! Scissors beat Paper!';
         break;
-      default:
-        result = 'Not a valid choice, you lose!';
     }
   document.querySelector('#result').textContent = result;
   keepScore(result);
@@ -95,6 +93,5 @@ const reloadGameButton = document.querySelector('.reload');
 choiceButtonsRPS.forEach(button =>
   button.addEventListener('click', playRockPaperScissors)
 );
-
 startGameButton.addEventListener('click', startGame);
 reloadGameButton.addEventListener('click', reloadGame);

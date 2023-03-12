@@ -1,16 +1,16 @@
 body {
   background: darkslategray;
   color: white;
-  display: flex;
   height: 100svh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: sans-serif;
 }
 
+body,
 .game {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #result {
@@ -18,17 +18,18 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  margin: 5rem;
+  margin-top: 1rem;
   border: 2px solid white;
   border-radius: 2px;
   width: 10rem;
   height: 3rem;
+  text-align: center;
 }
 
 #score {
   display: flex;
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   justify-content: center;
 }
 
