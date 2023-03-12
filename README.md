@@ -11,5 +11,20 @@ First, I created a function to determine the computer's choice. Then I wrote a f
 ### **Possible Improvements:**
 
 1. Trackers can be added to keep the score of each player.
-2. The game may optionally run with two players, instead of the computer.
-3. Some if-statements can be refactored with ternary operators.
+2. Some if-statements can be refactored with ternary operators.
+
+## **Ver. 2:**
+
+I added UI elements so that the game can be played properly, not within the console.
+
+I also added functionality that wasn't there before. Here is what you can do in the game now:
+
+1. You have a start screen on initial page load.
+2. You click buttons to make your choice. The buttons are icons, not text, and they are also slightly animated.
+3. After the game ends, it can be reloaded, without refreshing the page.
+
+### **Possible Improvements:**
+
+1. The computer choice can also be shown through icons.
+2. The design can be made more responsive, especially for smaller screens.
+3. The whole thing can be made slight better looking, though I actually like how it looks right now.
