@@ -21,7 +21,7 @@ body,
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
   border: 2px solid white;
   border-radius: 2px;
   width: 10rem;
@@ -60,10 +60,9 @@ h2 {
 
 button {
   background: white;
-  border: 2px solid white;
+  border: none;
   border-radius: 5px;
   padding: 3px;
-  margin: 2px;
   height: 5rem;
   width: 5rem;
   color: darkslategray;
@@ -97,4 +96,25 @@ button > * {
   height: auto;
   padding: 0 0.5rem;
   margin-top: 1rem;
+}
+
+#container {
+  display: flex;
+  gap: 10px;
+}
+
+.pc-choice {
+  background: darkslategray;
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 3px;
+  height: 5rem;
+  width: 5rem;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
