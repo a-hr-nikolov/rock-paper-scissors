@@ -118,3 +118,9 @@ button > * {
   align-items: center;
   box-sizing: border-box;
 }
+
+.pc-choice.select {
+  background: lightgray;
+  color: darkslategray;
+  border: none;
+}
