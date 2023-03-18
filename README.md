@@ -27,4 +27,4 @@ I also added functionality that wasn't there before. Here is what you can do in 
 
 1. The computer choice can also be shown through icons.
 2. The design can be made more responsive, especially for smaller screens.
-3. The whole thing can be made slight better looking, though I actually like how it looks right now.
+3. The whole thing can be made slightly better looking, though I actually like how it looks right now.
