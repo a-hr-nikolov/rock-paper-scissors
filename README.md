@@ -1,5 +1,7 @@
 # rock-paper-scissors
 
+## 👉 [TRY IT OUT HERE](https://a-hr-nikolov.github.io/rock-paper-scissors/ 'Rock Paper Scissors Game')
+
 A rock-paper-scissors game vs the computer
 
 ## **Ver. 1:**
