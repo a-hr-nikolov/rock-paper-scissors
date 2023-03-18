@@ -1,6 +1,6 @@
-# rock-paper-scissors
+# Rock-Paper-Scissors Game
 
-## 👉 [TRY IT OUT HERE](https://a-hr-nikolov.github.io/rock-paper-scissors/ 'Rock Paper Scissors Game')
+## 👉 <a href="https://a-hr-nikolov.github.io/rock-paper-scissors/" target="_blank">TRY IT OUT HERE</a>
 
 A rock-paper-scissors game vs the computer
 
@@ -31,3 +31,4 @@ I also added functionality that wasn't there before. Here is what you can do in 
 1. ~~The computer choice can also be shown through icons.~~
 2. The design can be made more responsive, especially for smaller screens.
 3. The whole thing can be made slightly better looking, though I actually like how it looks right now.
+4. Add "lizard" and "spock" options as well. :D
