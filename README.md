@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors Game
 
-## 👉 <a href="https://a-hr-nikolov.github.io/rock-paper-scissors/" target="_blank">TRY IT OUT HERE</a>
+## 👉 [Try it out here](https://a-hr-nikolov.github.io/rock-paper-scissors/)
 
 A rock-paper-scissors game vs the computer
 
