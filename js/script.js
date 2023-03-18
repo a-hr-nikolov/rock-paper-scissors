@@ -20,6 +20,13 @@ function playRockPaperScissors(event) {
   let computerChoice = getComputerChoice();
   let playerChoice = event.target.value;
   let result;
+
+  document
+    .querySelectorAll('.pc-choice')
+    .forEach(item => item.classList.remove('select'));
+
+  document.querySelector(`#pc-${computerChoice}`).classList.add('select');
+
   if (playerChoice === computerChoice) {
     result = 'The round is a DRAW, go again!';
   } else
