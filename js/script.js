@@ -86,6 +86,9 @@ function endGame() {
 }
 
 function reloadGame() {
+  document
+    .querySelectorAll('.pc-choice')
+    .forEach(item => item.classList.remove('select'));
   choiceButtonsRPS.forEach(button => button.classList.toggle('off'));
   reloadGameButton.classList.toggle('off');
   document.querySelector('#result').innerText = 'So you dare try again? Brave!';
