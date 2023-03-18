@@ -1,6 +1,7 @@
 function startGame(event) {
   event.target.classList.toggle('off');
   gameContainer.classList.toggle('off');
+  title.classList.toggle('off');
 }
 
 function getComputerChoice() {
@@ -89,6 +90,7 @@ const gameContainer = document.querySelector('.game');
 const choiceButtonsRPS = document.querySelectorAll('.choice');
 const startGameButton = document.querySelector('.start-game');
 const reloadGameButton = document.querySelector('.reload');
+const title = document.querySelector('.title');
 
 choiceButtonsRPS.forEach(button =>
   button.addEventListener('click', playRockPaperScissors)

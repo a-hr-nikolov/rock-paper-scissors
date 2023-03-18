@@ -8,7 +8,8 @@ body {
 }
 
 body,
-.game {
+.game,
+.title {
   display: flex;
   flex-direction: column;
   justify-content: center;
