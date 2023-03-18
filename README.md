@@ -22,9 +22,10 @@ I also added functionality that wasn't there before. Here is what you can do in 
 1. You have a start screen on initial page load.
 2. You click buttons to make your choice. The buttons are icons, not text, and they are also slightly animated.
 3. After the game ends, it can be reloaded, without refreshing the page.
+4. The computer choice is now displayed properly, it isn't simply stated in the results box.
 
 ### **Possible Improvements:**
 
-1. The computer choice can also be shown through icons.
+1. ~~The computer choice can also be shown through icons.~~
 2. The design can be made more responsive, especially for smaller screens.
 3. The whole thing can be made slightly better looking, though I actually like how it looks right now.
