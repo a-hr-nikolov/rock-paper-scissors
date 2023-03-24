@@ -71,9 +71,11 @@ button {
   box-shadow: 0 6px pink;
 }
 
-button:hover {
-  cursor: pointer;
-  background-color: rgb(255, 233, 233);
+@media (hover: hover) {
+  button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 233, 233);
+  }
 }
 
 button:active {
