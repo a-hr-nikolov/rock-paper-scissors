@@ -126,3 +126,14 @@ button > * {
   color: darkslategray;
   border: none;
 }
+
+.signature {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.signature a {
+  color: pink;
+  text-decoration: none;
+}
