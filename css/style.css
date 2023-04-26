@@ -1,3 +1,11 @@
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: darkslategray;
   color: white;
@@ -6,6 +14,27 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* TYPOGRAPHY */
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', fantasy;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  color: pink;
+}
+
+/* LAYOUT */
 
 body,
 .game,
@@ -36,26 +65,59 @@ body,
   justify-content: center;
 }
 
+#container {
+  display: flex;
+  gap: 10px;
+}
+
+/* COMPONENTS */
+
 .blocks {
   text-align: center;
   font-size: 2rem;
 }
 
-h1,
-h2 {
-  margin: 0;
-  padding: 0;
-  font-family: 'Bebas Neue', fantasy;
-  text-align: center;
+.start-game {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  width: auto;
+  height: auto;
+  padding: 0 0.5rem;
+  margin-top: 1rem;
 }
 
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
+.pc-choice {
+  background: darkslategray;
+  border: 3px solid white;
+  border-radius: 5px;
+  padding: 3px;
+  height: 5rem;
+  width: 5rem;
+  color: white;
   font-size: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.pc-choice.select {
+  background: lightgray;
+  color: darkslategray;
+  border: none;
+}
+
+.signature {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.signature a {
   color: pink;
+  text-decoration: none;
 }
 
 button {
@@ -87,53 +149,8 @@ button > * {
   pointer-events: none;
 }
 
+/* UTILITY */
+
 .off {
   display: none;
-}
-
-.start-game {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
-  width: auto;
-  height: auto;
-  padding: 0 0.5rem;
-  margin-top: 1rem;
-}
-
-#container {
-  display: flex;
-  gap: 10px;
-}
-
-.pc-choice {
-  background: darkslategray;
-  border: 3px solid white;
-  border-radius: 5px;
-  padding: 3px;
-  height: 5rem;
-  width: 5rem;
-  color: white;
-  font-size: 3rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.pc-choice.select {
-  background: lightgray;
-  color: darkslategray;
-  border: none;
-}
-
-.signature {
-  font-size: 0.8rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.signature a {
-  color: pink;
-  text-decoration: none;
 }
