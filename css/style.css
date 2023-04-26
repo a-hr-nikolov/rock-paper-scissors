@@ -1,3 +1,27 @@
+/*
+
+I've tried to organize my CSS below and I understand that it isn't the best.
+For example, it is not clear why somethings are classified as "layout" while others
+as "components". 
+
+My current reasoning is that in "layout", I've listed items that are only used for
+layout purposes - displays, containers, etc.
+
+Under "components" I've listed rules related to things that are logical pieces of
+a larger whole.
+
+Keep in mind this was my first foray into actually useful CSS, and I decided to not
+refactor it too much. Of course, everything can be written better, but I prefer to
+have a snapshot of where I started. Otherwise, I'd have to rewrite the whole thing
+from scratch, which is not the point of the exercise. I might do that, but only to
+compare how I'd decide to do things in the future.
+
+The only things that I have refactored in the CSS are the rule organization and
+property organization within each rule. That allows people to at least read it more
+easily, even if it still can be somewhat confusing logic-wise.
+
+*/
+
 /* GLOBAL */
 
 * {
@@ -7,20 +31,17 @@
 }
 
 body {
-  background: darkslategray;
-  color: white;
   height: 100svh;
+  background: darkslategray;
+
+  color: white;
   font-family: sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
-/* TYPOGRAPHY */
+/* TYPOGRAPHY ELEMENTS */
 
 h1,
 h2 {
-  margin: 0;
-  padding: 0;
   font-family: 'Bebas Neue', fantasy;
   text-align: center;
 }
@@ -38,36 +59,41 @@ h2 {
 
 body,
 .game,
-.title {
+.title,
+.pc-choice,
+#result,
+#score,
+#container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+body,
+.game,
+.title {
+  flex-direction: column;
+}
+
+#container {
+  gap: 10px;
+}
+
 #result {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
-  margin: 1rem 0;
+  margin: calc(1rem + 6px) 0 1rem 0;
   border: 2px solid white;
   border-radius: 2px;
-  width: 10rem;
-  height: 3rem;
+  width: 13rem;
+  height: 6rem;
+
   text-align: center;
 }
 
 #score {
-  display: flex;
   gap: 3rem;
-  margin-bottom: 1rem;
-  justify-content: center;
-}
 
-#container {
-  display: flex;
-  gap: 10px;
+  margin-bottom: 1rem;
 }
 
 /* COMPONENTS */
@@ -78,40 +104,41 @@ body,
 }
 
 .start-game {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
+  padding: 0 0.5rem;
   width: auto;
   height: auto;
-  padding: 0 0.5rem;
   margin-top: 1rem;
+
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
 }
 
 .pc-choice {
+  padding: 3px;
   background: darkslategray;
   border: 3px solid white;
   border-radius: 5px;
-  padding: 3px;
   height: 5rem;
   width: 5rem;
+
   color: white;
   font-size: 3rem;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
 }
 
 .pc-choice.select {
-  background: lightgray;
-  color: darkslategray;
   border: none;
+  background: lightgray;
+
+  color: darkslategray;
 }
 
 .signature {
-  font-size: 0.8rem;
   margin-top: 2rem;
+
+  font-size: 0.8rem;
   text-align: center;
+
   opacity: 0.5;
 }
 
@@ -121,27 +148,30 @@ body,
 }
 
 button {
-  background: white;
-  border: none;
-  border-radius: 5px;
-  padding: 3px;
   height: 5rem;
   width: 5rem;
+  padding: 3px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 6px pink;
+  background: white;
+
   color: darkslategray;
   font-size: 3rem;
   text-align: center;
-  box-shadow: 0 6px pink;
 }
 
 @media (hover: hover) {
   button:hover {
-    cursor: pointer;
     background-color: rgb(255, 233, 233);
+
+    cursor: pointer;
   }
 }
 
 button:active {
   box-shadow: none;
+
   transform: translateY(6px);
 }
 
