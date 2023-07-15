@@ -1,24 +1,8 @@
 /*
 
-I've tried to organize my CSS below and I understand that it isn't the best.
-For example, it is not clear why somethings are classified as "layout" while others
-as "components". 
-
-My current reasoning is that in "layout", I've listed items that are only used for
-layout purposes - displays, containers, etc.
-
-Under "components" I've listed rules related to things that are logical pieces of
-a larger whole.
-
-Keep in mind this was my first foray into actually useful CSS, and I decided to not
+This was my first foray into actually useful CSS, and I decided to not
 refactor it too much. Of course, everything can be written better, but I prefer to
-have a snapshot of where I started. Otherwise, I'd have to rewrite the whole thing
-from scratch, which is not the point of the exercise. I might do that, but only to
-compare how I'd decide to do things in the future.
-
-The only things that I have refactored in the CSS are the rule organization and
-property organization within each rule. That allows people to at least read it more
-easily, even if it still can be somewhat confusing logic-wise.
+have a snapshot of where I started.
 
 */
 
