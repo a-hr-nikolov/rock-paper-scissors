@@ -1,3 +1,22 @@
+/* 
+
+This is my first practice project that actually amounts to something. I've only
+refactored small pieces here and there, mainly to make it easier to read.
+
+*/
+
+const gameContainer = document.querySelector('.game');
+const choiceButtonsRPS = document.querySelectorAll('.choice');
+const startGameButton = document.querySelector('.start-game');
+const reloadGameButton = document.querySelector('.reload');
+const title = document.querySelector('.title');
+
+choiceButtonsRPS.forEach(button =>
+  button.addEventListener('click', playRockPaperScissors)
+);
+startGameButton.addEventListener('click', startGame);
+reloadGameButton.addEventListener('click', reloadGame);
+
 function startGame(event) {
   event.target.classList.toggle('off');
   gameContainer.classList.toggle('off');
@@ -95,15 +114,3 @@ function reloadGame() {
   document.querySelector('#player-score').innerText = '0';
   document.querySelector('#computer-score').innerText = '0';
 }
-
-const gameContainer = document.querySelector('.game');
-const choiceButtonsRPS = document.querySelectorAll('.choice');
-const startGameButton = document.querySelector('.start-game');
-const reloadGameButton = document.querySelector('.reload');
-const title = document.querySelector('.title');
-
-choiceButtonsRPS.forEach(button =>
-  button.addEventListener('click', playRockPaperScissors)
-);
-startGameButton.addEventListener('click', startGame);
-reloadGameButton.addEventListener('click', reloadGame);
